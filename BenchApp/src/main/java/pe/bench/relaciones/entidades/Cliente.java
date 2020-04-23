@@ -15,6 +15,8 @@ public class Cliente {
 	private String telefono;
 	private String triunfaremosenHD1;
 	
+	private String ErniGay;
+	
 	/*Sets/Gets*/
 	public Long getCodigo() {
 		return codigo;
