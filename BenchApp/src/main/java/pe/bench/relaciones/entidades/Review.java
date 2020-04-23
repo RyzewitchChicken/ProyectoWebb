@@ -2,14 +2,31 @@ package pe.bench.relaciones.entidades;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="TB_REVIEW")
 public class Review {
 	/*Atributos*/
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idReview")
 	private Long codigo;
+	
 	private String titulo;
 	private String descripcion;
 	private Date fecha;
-	private String codigo_cliente;
+	//@ManyToOne
+	//@JoinColumn(name="idCliente")
+	//@JsonIgnore
+	private Long codigo_cliente;
 	
 	
 	
@@ -38,10 +55,10 @@ public class Review {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
-	public String getCodigo_cliente() {
+	public Long getCodigo_cliente() {
 		return codigo_cliente;
 	}
-	public void setCodigo_cliente(String codigo_cliente) {
+	public void setCodigo_cliente(Long codigo_cliente) {
 		this.codigo_cliente = codigo_cliente;
 	}
 	

@@ -1,12 +1,25 @@
 package pe.bench.relaciones.entidades;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-
+@Entity
+@Table(name="TB_CARRITO")
 public class Carrito {
 	/*Atributos*/
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idCarrito")
 	private Long codigo;
+	
 	private Long cantidad;
+	//@OneToOne(mappedBy = "carrito")
 	private Long id_producto;
+	//@OneToOne(mappedBy = "carrito")
 	private Long id_cliente;
 
 	

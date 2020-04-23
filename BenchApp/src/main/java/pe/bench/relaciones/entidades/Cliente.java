@@ -1,21 +1,22 @@
 package pe.bench.relaciones.entidades;
 
-import java.io.Serializable;
+
 import java.util.List;
 
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+
+
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "cliente")
-public class Cliente implements Serializable {
+@Table(name = "TB_CLIENTE")
+public class Cliente  {
 	
 	/*Atributos*/
 	@Id
@@ -24,9 +25,9 @@ public class Cliente implements Serializable {
 	private Long codigo;
 	
 	private String direccion;
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn
+
 	private List<Review> reviews;
+
 	private List<Pedido> pedidos;
 	private String nombre;
 	private String correo;

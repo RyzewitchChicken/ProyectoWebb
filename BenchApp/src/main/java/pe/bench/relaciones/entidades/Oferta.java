@@ -3,23 +3,39 @@ package pe.bench.relaciones.entidades;
 import java.util.Date;
 import java.util.List;
 
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="TB_OFERTA")
 public class Oferta {
 	
 	/*Atributos*/
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idOferta")
 	private Long codigo;
+	
 	private String titulo;
 	private String descripcion;
 	/*Fechas de inicio y final de oferta*/
 	private Date fecha_inicio;
 	private Date fecha_final;
+	//@OneToMany(mappedBy = "oferta", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<Producto> productos;
+	//@ManyToOne
+	//@JoinColumn(name="idRestaurante")
+	//@JsonIgnore
+	private Long id_restaurante;
 	
-	
-	//prueba
-	public void biquear()
-	{
-		
-	}
 	
 	/*Sets/Gets*/
 	public Long getCodigo() {

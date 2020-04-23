@@ -2,13 +2,37 @@ package pe.bench.relaciones.entidades;
 
 import java.util.List;
 
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+
+import javax.persistence.Table;
+
+
+
+
+@Entity
+@Table(name="TB_PEDIDO")
 public class Pedido {
 	/*Atributos*/
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idPedido")
 	private Long codigo;
+	
 	private Long costo_total;
+	/*@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL,fetch = FetchType.LAZY)*/
 	private List<Producto> productos;
 	private String direccion;
+	
 	private Long id_cliente;
+	
 	private Long id_restaurante;
 
 	
