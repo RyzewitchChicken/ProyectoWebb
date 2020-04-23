@@ -13,9 +13,9 @@ public class Cliente {
 	private String correo;
 	private String contraseña;
 	private String telefono;
-	private String triunfaremosenHD1;
+	private String TasLocofranco;
 	
-	private String ErniGay;
+	
 	
 	/*Sets/Gets*/
 	public Long getCodigo() {
