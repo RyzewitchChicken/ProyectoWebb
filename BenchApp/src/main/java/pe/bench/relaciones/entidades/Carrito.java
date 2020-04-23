@@ -8,6 +8,7 @@ public class Carrito {
 	private Long cantidad;
 	private Long id_producto;
 	private Long id_cliente;
+	private Long AAAA;
 	
 	
 	/*Sets/Gets*/
