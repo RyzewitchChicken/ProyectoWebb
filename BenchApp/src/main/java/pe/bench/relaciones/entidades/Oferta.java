@@ -15,7 +15,11 @@ public class Oferta {
 	private List<Producto> productos;
 	
 	
-	
+	//prueba
+	public void biquear()
+	{
+		
+	}
 	
 	/*Sets/Gets*/
 	public Long getCodigo() {
