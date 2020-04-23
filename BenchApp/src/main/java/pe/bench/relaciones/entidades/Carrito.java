@@ -10,6 +10,7 @@ public class Carrito {
 	private Long id_cliente;
 	private Long Hola;
 	private String mergeeeee;
+	private String ASDsadas;
 	
 	/*Sets/Gets*/
 	public Long getCodigo() {
