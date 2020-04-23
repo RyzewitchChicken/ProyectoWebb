@@ -10,10 +10,7 @@ public class Pizzeria {
 	private String nombre;
 	private Long telefono;
 	private List<Producto> productos;
-    private List<Oferta> ofertas;
-    private String prueba;
-    
-    
+    private List<Oferta> ofertas;    
     
     /*Sets/Gets*/
 	public Long getId_restaurante() {

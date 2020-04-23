@@ -1,21 +1,37 @@
 package pe.bench.relaciones.entidades;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Cliente {
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cliente")
+public class Cliente implements Serializable {
 	
 	/*Atributos*/
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idCliente")
 	private Long codigo;
+	
 	private String direccion;
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn()
 	private List<Review> reviews;
 	private List<Pedido> pedidos;
 	private String nombre;
 	private String correo;
 	private String contraseña;
-	private String telefono;
-	private String TasLocofranco;
-	
-	
+	private String telefono;	
 	
 	/*Sets/Gets*/
 	public Long getCodigo() {
