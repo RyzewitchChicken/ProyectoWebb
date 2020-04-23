@@ -13,7 +13,7 @@ public class Cliente {
 	private String correo;
 	private String contraseña;
 	private String telefono;
-	private String triunfaremosenHD;
+	private String triunfaremosenHD1;
 	
 	/*Sets/Gets*/
 	public Long getCodigo() {
