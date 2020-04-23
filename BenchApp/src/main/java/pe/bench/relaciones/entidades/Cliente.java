@@ -14,12 +14,6 @@ public class Cliente {
 	private String contraseña;
 	private String telefono;
 	
-	//nuevo
-	public void LogIn()
-	{
-		
-	}
-	
 	
 	/*Sets/Gets*/
 	public Long getCodigo() {

@@ -11,7 +11,7 @@ public class Pizzeria {
 	private Long telefono;
 	private List<Producto> productos;
     private List<Oferta> ofertas;
-    
+    private String prueba;
     
     
     
