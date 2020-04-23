@@ -25,7 +25,7 @@ public class Cliente implements Serializable {
 	
 	private String direccion;
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn()
+	@JoinColumn
 	private List<Review> reviews;
 	private List<Pedido> pedidos;
 	private String nombre;
