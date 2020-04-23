@@ -8,10 +8,7 @@ public class Carrito {
 	private Long cantidad;
 	private Long id_producto;
 	private Long id_cliente;
-<<<<<<< HEAD
-=======
-	private Long Cha2u;
->>>>>>> 42634c25a7bcdc1e77b2ef96f4997c0dd9fc34d0
+
 	
 	/*Sets/Gets*/
 	public Long getCodigo() {
